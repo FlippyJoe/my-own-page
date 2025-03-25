@@ -296,31 +296,6 @@ nav {
   }
 }
 
-/* Breakpoints */
-
-@media (min-width: 985px) {
-  .openMenu,
-  .closeMenu {
-    display: none;
-  }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .links {
-    margin: 0;
-    margin-top: -30px;
-    /* width: 90%; */
-    flex-direction: row;
-    gap: 10rem;
-    -webkit-animation: navAppear 2.5s ease both;
-    animation: navAppear 2.5s ease both;
-  }
-}
-
 /* About page Main Section */
 
 .aboutMain {
@@ -393,4 +368,47 @@ nav {
 
 .aboutText h2 {
   font-size: var(--h2Size);
+}
+
+/* Portfolio Page */
+/* Main */
+
+.portfolioMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+
+  width: 95dvh;
+  z-index: -1;
+}
+
+.portfolioMain img {
+  max-width: 250px;
+}
+
+/* Breakpoints */
+
+@media (min-width: 985px) {
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    margin: 0;
+    margin-top: -30px;
+    flex-direction: row;
+    gap: 10rem;
+    -webkit-animation: navAppear 2.5s ease both;
+    animation: navAppear 2.5s ease both;
+  }
 }
