@@ -83,6 +83,18 @@ nav {
   height: 5px;
 }
 
+.links::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, black, black, red, black, black);
+  position: absolute;
+  -webkit-animation: kitt 5s alternate linear both infinite;
+  animation: kitt 5s alternate linear both infinite;
+} /*kitt animation is defined in portfolio section*/
+
 #activeBar:checked ~ .links {
   margin-right: 0;
 }
@@ -149,12 +161,12 @@ nav {
   left: 0;
   bottom: 0;
   width: 20%;
-  height: 2px;
+  height: 1px;
   box-shadow: 2px 2px 5px;
 
-  -webkit-animation: heroBorder 1s both alternate 1s;
+  -webkit-animation: heroBorder 1.5s both alternate 1s;
 
-  animation: heroBorder 1s both alternate 1s;
+  animation: heroBorder 1.5s both alternate 1s;
 }
 
 .heroHomeHead::after {
@@ -163,13 +175,13 @@ nav {
   left: 0;
   bottom: 0;
   width: 50%;
-  height: 2px;
+  height: 1px;
   box-shadow: 2px 2px 5px;
   position: absolute;
 
-  -webkit-animation: heroBorder 1s both alternate 1.5s;
+  -webkit-animation: heroBorder 1.5s both alternate 1.5s;
 
-  animation: heroBorder 1s both alternate 1.5s;
+  animation: heroBorder 1.5s both alternate 1.5s;
 }
 
 .heroHomeContent {
@@ -319,8 +331,8 @@ nav {
   bottom: 0;
   height: 2px;
   width: 100%;
-  -webkit-animation: aboutBorderAppear 4s ease both 1s;
-  animation: aboutBorderAppear 4s ease both 1s;
+  -webkit-animation: aboutBorderAppear 4s ease both 4s;
+  animation: aboutBorderAppear 4s ease both 4s;
 }
 
 .aboutText h2 {
@@ -329,8 +341,8 @@ nav {
 }
 
 .aboutText p {
-  -webkit-animation: aboutBorderAppear 4s ease both 2s;
-  animation: aboutBorderAppear 4s ease both 2s;
+  -webkit-animation: aboutBorderAppear 4s ease both 3s;
+  animation: aboutBorderAppear 4s ease both 3s;
 }
 
 @-webkit-keyframes aboutBorderAppear {
@@ -369,6 +381,17 @@ nav {
 .portfolioMain {
   margin-top: 100px;
   position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolioHeader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: 100vh;
 }
 
 .portfolioHead {
@@ -377,10 +400,12 @@ nav {
   width: 80%;
   text-align: center;
 
-  animation: portfolioHeadAppear 3s ease 3s both;
+  -webkit-animation: portfolioHeadAppear 2s ease 2s both;
+
+  animation: portfolioHeadAppear 2s ease 2s both;
 }
 
-@keyframes portfolioHeadAppear {
+@-webkit-keyframes portfolioHeadAppear {
   from {
     opacity: 0;
     transform: translateX(0);
@@ -391,15 +416,24 @@ nav {
   }
 }
 
-.links::after {
+@keyframes portfolioHeadAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolioHead::before {
   content: "";
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 80%;
   height: 2px;
-  background: linear-gradient(95deg, black, black, red, black, black);
+  background: linear-gradient(95deg, black, white, black, black, black);
   position: absolute;
-  animation: kitt 5s alternate linear both infinite;
+  animation: portfolioHeadBorder 4s ease both 4s;
 }
 
 .portfolioHead::after {
@@ -408,12 +442,21 @@ nav {
   left: 0;
   width: 80%;
   height: 2px;
-  background: linear-gradient(95deg, black, black, red, black, black);
+  background: linear-gradient(95deg, black, black, black, white, black);
   position: absolute;
-  animation: kitt 5s alternate linear both infinite;
+  animation: portfolioHeadBorder 4s ease both 3s;
 }
 
-@keyframes kitt {
+@keyframes portfolioHeadBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes kitt {
   0% {
     transform: translateX(0);
   }
@@ -449,6 +492,88 @@ nav {
   }
 }
 
+@keyframes kitt {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(10%);
+  }
+  20% {
+    transform: translateY(20%);
+  }
+  30% {
+    transform: translateY(30%);
+  }
+  40% {
+    transform: translateY(40%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  60% {
+    transform: translateY(40%);
+  }
+  70% {
+    transform: translateY(30%);
+  }
+  80% {
+    transform: translateY(20%);
+  }
+  90% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.portfolioIntro {
+  width: 70%;
+
+  font-size: var(--pSize);
+  margin-left: 5%;
+  text-align: center;
+  animation: portfolioHeadAppear 2s ease 6s both;
+}
+
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  text-align: center;
+  font-size: var(--pSize);
+  animation: scrollAppear 4s linear both alternate 8s,
+    scrollRoll 2s ease 5s infinite;
+}
+
+@keyframes scrollAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollRoll {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.projects {
+  position: absolute;
+  margin-top: 100vh;
+}
+
 /* Breakpoints */
 
 @media (min-width: 985px) {
@@ -470,5 +595,89 @@ nav {
     gap: 10rem;
     -webkit-animation: navAppear 2.5s ease both;
     animation: navAppear 2.5s ease both;
+  }
+  .links::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(95deg, black, black, red, black, black);
+    position: absolute;
+    -webkit-animation: kitt 5s alternate linear both infinite;
+    animation: kitt 5s alternate linear both infinite;
+  } /*kitt animation is defined in portfolio section*/
+  @-webkit-keyframes kitt {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(10%);
+    }
+    20% {
+      transform: translateX(20%);
+    }
+    30% {
+      transform: translateX(30%);
+    }
+    40% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    60% {
+      transform: translateX(40%);
+    }
+    70% {
+      transform: translateX(30%);
+    }
+    80% {
+      transform: translateX(20%);
+    }
+    90% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes kitt {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(10%);
+    }
+    20% {
+      transform: translateX(20%);
+    }
+    30% {
+      transform: translateX(30%);
+    }
+    40% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    60% {
+      transform: translateX(40%);
+    }
+    70% {
+      transform: translateX(30%);
+    }
+    80% {
+      transform: translateX(20%);
+    }
+    90% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .portfolioIntro {
+    margin: 150px 0 0 25%;
   }
 }
