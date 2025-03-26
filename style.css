@@ -381,9 +381,9 @@ nav {
 .portfolioMain {
   margin-top: 100px;
   position: absolute;
-  width: 90%;
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .portfolioHeader {
@@ -391,7 +391,7 @@ nav {
   display: flex;
   flex-direction: column;
   width: inherit;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .portfolioHead {
@@ -572,6 +572,18 @@ nav {
 .projects {
   position: absolute;
   margin-top: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  align-items: baseline;
+  height: 100dvh;
+  width: 90%;
+}
+
+.projectCard {
+  height: 250px;
+  width: 90%;
+  border: 1px solid white;
 }
 
 /* Breakpoints */
