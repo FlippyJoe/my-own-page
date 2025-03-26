@@ -6,6 +6,9 @@ html {
   color: wheat;
   overflow-x: hidden;
 }
+img {
+  max-width: 100%;
+}
 
 :root {
   --h1Size: clamp(2rem, 2.5vw, 1.8rem);
@@ -307,6 +310,7 @@ nav {
   gap: 25px;
   margin-top: 100px;
   position: absolute;
+  z-index: -1;
 }
 
 .aboutText {
@@ -399,6 +403,7 @@ nav {
   position: relative;
   width: 80%;
   text-align: center;
+  z-index: -1;
 
   -webkit-animation: portfolioHeadAppear 2s ease 2s both;
 
@@ -534,6 +539,7 @@ nav {
   font-size: var(--pSize);
   margin-left: 5%;
   text-align: center;
+  z-index: -1;
   animation: portfolioHeadAppear 2s ease 6s both;
 }
 
@@ -544,6 +550,7 @@ nav {
   width: 100vw;
   text-align: center;
   font-size: var(--pSize);
+  z-index: -1;
   animation: scrollAppear 4s linear both alternate 8s,
     scrollRoll 2s ease 5s infinite;
 }
@@ -572,18 +579,50 @@ nav {
 .projects {
   position: absolute;
   margin-top: 100vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-direction: column;
   justify-items: center;
-  align-items: baseline;
-  height: 100dvh;
-  width: 90%;
+  align-items: center;
+  height: 200dvh;
+  width: 100%;
+  gap: 15%;
+  z-index: -1;
 }
 
 .projectCard {
-  height: 250px;
+  height: fit-content;
   width: 90%;
   border: 1px solid white;
+  text-align: center;
+  animation: projectCardAppear;
+  animation-timeline: View();
+  animation-range: entry 0%;
+}
+
+@keyframes projectCardAppear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.projectCard img {
+  width: 800px;
+}
+
+.projectCard a {
+  text-decoration: none;
+  color: wheat;
+  font-size: var(--pSize);
+  transition: 0.4s;
+}
+
+.projectCard a:hover {
+  color: #ff4500;
 }
 
 /* Breakpoints */
