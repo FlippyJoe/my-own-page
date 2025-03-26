@@ -106,15 +106,6 @@ nav {
   text-decoration: underline;
 }
 
-.brushLine {
-  height: 80px;
-  width: 100%;
-  margin-top: 30px;
-  -webkit-animation: navAppear 2.5s ease both;
-  animation: navAppear 2.5s ease both;
-  z-index: -1;
-}
-
 /* Home page Hero Section */
 
 .heroHome {
@@ -122,7 +113,7 @@ nav {
   flex-direction: column;
   margin-top: 10%;
   margin-left: 20%;
-  position: relative;
+  position: absolute;
   z-index: -1;
   gap: 5rem;
   width: 80vw;
@@ -302,6 +293,8 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 100px;
+  position: absolute;
 }
 
 .aboutText {
@@ -374,19 +367,86 @@ nav {
 /* Main */
 
 .portfolioMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  gap: 50px;
-
-  width: 95dvh;
-  z-index: -1;
+  margin-top: 100px;
+  position: absolute;
 }
 
-.portfolioMain img {
-  max-width: 250px;
+.portfolioHead {
+  font-size: var(--h1Size);
+  position: relative;
+  width: 80%;
+  text-align: center;
+
+  animation: portfolioHeadAppear 3s ease 3s both;
+}
+
+@keyframes portfolioHeadAppear {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(1);
+  }
+}
+
+.links::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(95deg, black, black, red, black, black);
+  position: absolute;
+  animation: kitt 5s alternate linear both infinite;
+}
+
+.portfolioHead::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(95deg, black, black, red, black, black);
+  position: absolute;
+  animation: kitt 5s alternate linear both infinite;
+}
+
+@keyframes kitt {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(10%);
+  }
+  20% {
+    transform: translateX(20%);
+  }
+  30% {
+    transform: translateX(30%);
+  }
+  40% {
+    transform: translateX(40%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  60% {
+    transform: translateX(40%);
+  }
+  70% {
+    transform: translateX(30%);
+  }
+  80% {
+    transform: translateX(20%);
+  }
+  90% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Breakpoints */
