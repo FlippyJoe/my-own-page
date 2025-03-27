@@ -441,6 +441,7 @@ nav {
   height: 2px;
   background: linear-gradient(95deg, black, white, black, black, black);
   position: absolute;
+  -webkit-animation: portfolioHeadBorder 4s ease both 4s;
   animation: portfolioHeadBorder 4s ease both 4s;
 }
 
@@ -452,7 +453,17 @@ nav {
   height: 2px;
   background: linear-gradient(95deg, black, black, black, white, black);
   position: absolute;
+  -webkit-animation: portfolioHeadBorder 4s ease both 3s;
   animation: portfolioHeadBorder 4s ease both 3s;
+}
+
+@-webkit-keyframes portfolioHeadBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes portfolioHeadBorder {
@@ -543,6 +554,7 @@ nav {
   margin-left: 5%;
   text-align: center;
   z-index: -1;
+  -webkit-animation: portfolioHeadAppear 2s ease 6s both;
   animation: portfolioHeadAppear 2s ease 6s both;
 }
 
@@ -554,8 +566,19 @@ nav {
   text-align: center;
   font-size: var(--pSize);
   z-index: -1;
+  -webkit-animation: scrollAppear 4s linear both alternate 8s,
+    scrollRoll 2s ease 5s infinite;
   animation: scrollAppear 4s linear both alternate 8s,
     scrollRoll 2s ease 5s infinite;
+}
+
+@-webkit-keyframes scrollAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scrollAppear {
@@ -564,6 +587,18 @@ nav {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes scrollRoll {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 
@@ -593,13 +628,27 @@ nav {
 }
 
 .projectCard {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 90%;
   border: 1px solid white;
   text-align: center;
+  -webkit-animation: projectCardAppear;
   animation: projectCardAppear;
   animation-timeline: View();
   animation-range: entry 0%;
+}
+
+@-webkit-keyframes projectCardAppear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 @keyframes projectCardAppear {
@@ -726,6 +775,8 @@ nav {
   border: none;
   border-radius: var(--buttonBorderRadius);
   width: 10%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
   min-width: fit-content;
 
   color: wheat;
