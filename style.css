@@ -185,17 +185,40 @@ nav {
   box-shadow: 2px 2px 5px;
   position: absolute;
 
-  -webkit-animation: heroBorder 1.5s both alternate 1.5s;
+  -webkit-animation: heroBorder 1.5s both alternate 2.5s;
 
-  animation: heroBorder 1.5s both alternate 1.5s;
+  animation: heroBorder 1.5s both alternate 2.5s;
 }
 
 .heroHomeContent {
   font-size: var(--pSize);
   width: 90%;
   position: relative;
+}
+
+.homeFirstSpan {
   -webkit-animation: navAppear 2.5s ease both 3s;
   animation: navAppear 2.5s ease both 3s;
+}
+
+.homeSecondSpan {
+  -webkit-animation: navAppear 2.5s ease both 5s;
+  animation: navAppear 2.5s ease both 5s;
+}
+
+.homeThirdSpan {
+  -webkit-animation: navAppear 2.5s ease both 8s;
+  animation: navAppear 2.5s ease both 8s;
+}
+
+.homeFourthSpan {
+  -webkit-animation: navAppear 2.5s ease both 11s;
+  animation: navAppear 2.5s ease both 11s;
+}
+
+.homeFifthSpan {
+  -webkit-animation: navAppear 2.5s ease both 14s;
+  animation: navAppear 2.5s ease both 14s;
 }
 
 .heroHomeContent::before {
@@ -211,8 +234,8 @@ nav {
     rgba(0, 0, 0, 0.8)
   );
   position: absolute;
-  -webkit-animation: contentBorderAppear 4s ease both 4s;
-  animation: contentBorderAppear 4s ease both 4s;
+  -webkit-animation: contentBorderAppear 4s ease both 12s;
+  animation: contentBorderAppear 4s ease both 12s;
 }
 
 @-webkit-keyframes contentBorderAppear {
