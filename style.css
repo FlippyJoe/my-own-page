@@ -14,6 +14,8 @@ img {
   --h1Size: clamp(2rem, 2.5vw, 1.8rem);
   --h2Size: clamp(1.5rem, 2vw, 1.2rem);
   --pSize: clamp(1.2rem, 1.5vw, 1rem);
+  --formBorderRadius: 10px;
+  --buttonBorderRadius: 8px;
 }
 
 body {
@@ -37,6 +39,7 @@ nav {
   height: 75px;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .openMenu,
@@ -625,6 +628,127 @@ nav {
   color: #ff4500;
 }
 
+/* Contact page */
+
+.contactLinks {
+  margin-top: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+
+  width: 100vw;
+}
+
+.contactLinks a {
+  font-size: var(--h1Size);
+  color: wheat;
+  transition: 0.4s;
+}
+
+.contactLinks a:hover {
+  color: rgb(169, 169, 238);
+}
+
+.contactLinks::before {
+  content: "";
+  background: linear-gradient(45deg, black, white, black);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: -10px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  margin-top: 40%;
+
+  gap: 1.5rem;
+
+  padding: 25px 0;
+  z-index: 0;
+}
+
+.contactLinks::after {
+  content: "";
+  background: linear-gradient(45deg, black, rgb(54, 158, 228), black);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formSection input {
+  margin-bottom: 15px;
+  width: 90vw;
+  font-size: 1rem;
+
+  border-radius: var(--formBorderRadius);
+  text-align: center;
+  padding: 2px 5px;
+}
+
+.contactFormLabel {
+  display: inline-block;
+  width: 150px;
+
+  font-size: var(--pSize);
+}
+
+.formMessage {
+  width: 95vw;
+}
+
+#message {
+  width: 90%;
+  height: 150px;
+
+  border-radius: var(--formBorderRadius);
+  padding: 2px 5px;
+}
+
+.formSubmitBtn {
+  background-color: rgba(0, 0, 0);
+  border: none;
+  border-radius: var(--buttonBorderRadius);
+  width: 10%;
+  min-width: fit-content;
+
+  color: wheat;
+  font-size: var(--pSize);
+  transition: 0.75s ease;
+
+  position: relative;
+}
+
+.formSubmitBtn:hover {
+  background-color: rgb(34, 34, 138);
+}
+
+.formSubmitBtn::after {
+  content: "";
+  background: linear-gradient(45deg, black, white, black);
+  width: 90vw;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  left: -30vw;
+}
+
 /* Breakpoints */
 
 @media (min-width: 985px) {
@@ -644,6 +768,7 @@ nav {
     margin-top: -30px;
     flex-direction: row;
     gap: 10rem;
+    z-index: 1000;
     -webkit-animation: navAppear 2.5s ease both;
     animation: navAppear 2.5s ease both;
   }
@@ -730,5 +855,23 @@ nav {
   }
   .portfolioIntro {
     margin: 150px 0 0 25%;
+  }
+
+  .contactForm {
+    margin-top: 10%;
+  }
+
+  .formSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formSection input {
+    width: 90%;
+  }
+  .formMessage {
+    width: 40vw;
   }
 }
