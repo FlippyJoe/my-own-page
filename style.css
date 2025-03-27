@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   color: wheat;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 img {
   max-width: 100%;
@@ -16,6 +17,8 @@ img {
   --pSize: clamp(1.2rem, 1.5vw, 1rem);
   --formBorderRadius: 10px;
   --buttonBorderRadius: 8px;
+  --aboutSectionAfterOne: linear-gradient(45deg, black, white, black);
+  --aboutSectionAfterTwo: linear-gradient(-45deg, white, black, white);
 }
 
 body {
@@ -330,6 +333,16 @@ nav {
 
 /* About page Main Section */
 
+.fa-arrow-down {
+  color: grey;
+  margin-top: 120%;
+  margin-left: 10%;
+  float: left;
+  position: fixed;
+  font-size: 5rem;
+  /* opacity: 0.4; */
+}
+
 .aboutMain {
   display: flex;
   flex-direction: column;
@@ -339,40 +352,162 @@ nav {
   z-index: -1;
 }
 
+.aboutScroll {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  animation: aboutScrollFlash 4s ease both 5s alternate infinite;
+}
+
+@keyframes aboutScrollFlash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
 .aboutText {
-  width: 80%;
+  width: 90%;
+  height: 60dvh;
   align-self: center;
-  justify-self: center;
+  justify-content: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
   z-index: -1;
 }
 
-.aboutText::before {
+.aboutPartOne {
+  position: relative;
+  animation: aboutBorderAppear 4s ease both 0.5s;
+}
+
+.aboutPartOne::after {
   content: "";
-  position: absolute;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 0, 0, 0.8),
-    rgba(138, 43, 226, 0.8),
-    rgba(0, 0, 255, 0.8),
-    rgba(0, 0, 0, 0.8)
-  );
-  left: 0;
-  bottom: 0;
-  height: 2px;
   width: 100%;
-  -webkit-animation: aboutBorderAppear 4s ease both 4s;
-  animation: aboutBorderAppear 4s ease both 4s;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: 0%;
+  left: 0;
 }
 
-.aboutText h2 {
-  -webkit-animation: aboutBorderAppear 4s ease both 1.5s;
-  animation: aboutBorderAppear 4s ease both 1.5s;
+.aboutPartTwo {
+  position: relative;
+  animation: aboutAppear linear forwards;
+  opacity: 0;
+  animation-timeline: View();
+  animation-range: entry 15%;
 }
 
-.aboutText p {
-  -webkit-animation: aboutBorderAppear 4s ease both 3s;
-  animation: aboutBorderAppear 4s ease both 3s;
+.aboutPartTwo::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+}
+
+.aboutPartThree {
+  position: relative;
+  animation: aboutSlideInFromLeft linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.aboutPartThree::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+}
+
+.aboutPartFour {
+  position: relative;
+  animation: aboutSlideInFromRight linear forwards;
+  animation-timeline: View();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.aboutPartFour::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.aboutPartFive {
+  position: relative;
+  animation: aboutSlideInFromLeft forwards;
+  animation-timeline: View();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.aboutPartFive::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(45deg, black, white, black);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+@keyframes changeColor {
+  from {
+    background: var(--aboutSectionAfterOne);
+  }
+  to {
+    background: var(--aboutSectionAfterTwo);
+  }
+}
+
+@keyframes aboutAppear {
+  from {
+    opacity: 0;
+  }
+  from {
+    scale: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes aboutSlideInFromLeft {
+  from {
+    transform: translateX(-100%) scale(0);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes aboutSlideInFromRight {
+  from {
+    transform: translateX(100%) scale(0);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
 }
 
 @-webkit-keyframes aboutBorderAppear {
@@ -824,9 +959,14 @@ nav {
   left: -30vw;
 }
 
+.footerP {
+  font-size: clamp(0.5rem, 1vw, 0.8rem);
+}
+
 /* Breakpoints */
 
 @media (min-width: 985px) {
+  /*Nav bar breakpoints*/
   .openMenu,
   .closeMenu {
     display: none;
@@ -928,6 +1068,11 @@ nav {
       transform: translateX(0);
     }
   }
+  /*About page breakpoints*/
+  .aboutText {
+    width: 50%;
+  }
+
   .portfolioIntro {
     margin: 150px 0 0 25%;
   }

@@ -39,7 +39,9 @@
         <a href="https://github.com/FlippyJoe" target="_blank"><i class="fa-brands fa-github"></i></a>
       </section>
       <br>
-    <form action="" class="contactForm">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+      <input type="hidden" name="access_key" value="3add32b7-787a-45e2-ade6-d0e9ba0ad693">
+      <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">
       <section class="formSection formName"><label for="name"   class="contactFormLabel nameLabel">*Your name: </label>
           <input type="text" name="name" id="nameForm" placeholder="Your name" required class="contactFormInput"></section>
       <section class="formSection formEmail"><label for="email" class="contactFormLabel emailLabel">*Your email: </label>
@@ -55,6 +57,7 @@
       </section>
         <button type="submit" class="formSubmitBtn">Submit form</button>
      </form>
+     <footer><p class="footerP">* Required field</p></footer>
       
   </body>
 </html>
