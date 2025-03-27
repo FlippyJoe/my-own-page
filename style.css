@@ -1,0 +1,1097 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: wheat;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+}
+
+:root {
+  --h1Size: clamp(2rem, 2.5vw, 1.8rem);
+  --h2Size: clamp(1.5rem, 2vw, 1.2rem);
+  --pSize: clamp(1.2rem, 1.5vw, 1rem);
+  --formBorderRadius: 10px;
+  --buttonBorderRadius: 8px;
+  --aboutSectionAfterOne: linear-gradient(45deg, black, white, black);
+  --aboutSectionAfterTwo: linear-gradient(-45deg, white, black, white);
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  width: 100vw;
+}
+
+#activeBar,
+.closeMenu {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100vw;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.openMenu,
+.closeMenu {
+  margin-right: auto;
+  margin-left: 1%;
+  font-size: 2rem;
+  color: wheat;
+}
+
+#activeBar:checked ~ .openMenu {
+  display: none;
+}
+
+#activeBar:checked ~ .closeMenu {
+  display: block;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(2rem, 2.5vw, 1.5rem);
+
+  position: relative;
+
+  margin-top: 175px;
+  margin-right: -100%;
+
+  padding-right: 25px;
+  transition: 0.75s ease;
+
+  background-color: rgba(9, 6, 6, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.links::before {
+  content: "";
+  background: linear-gradient(45deg, #ffffff, #d3d3d3, #808080, #0000);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.links::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, black, black, red, black, black);
+  position: absolute;
+  -webkit-animation: kitt 5s alternate linear both infinite;
+  animation: kitt 5s alternate linear both infinite;
+} /*kitt animation is defined in portfolio section*/
+
+#activeBar:checked ~ .links {
+  margin-right: 0;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: wheat;
+  font-size: var(--h2Size);
+  padding: 8px;
+  transition: 0.5s ease-in-out;
+}
+
+.links a:hover {
+  color: rgb(180, 180, 241);
+  font-weight: 800;
+}
+
+.links .activePage {
+  color: rgb(63, 63, 255);
+  text-decoration: underline;
+}
+
+/* Home page Hero Section */
+
+.heroHome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-left: 20%;
+  position: absolute;
+  z-index: -1;
+  gap: 5rem;
+  width: 80vw;
+}
+
+.heroHomeHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  position: relative;
+}
+
+.heroHome h1 {
+  font-size: var(--h1Size);
+  margin: 0;
+  -webkit-animation: heroTextEnter 4s both alternate 1s;
+  animation: heroTextEnter 4s both alternate 1s;
+}
+
+.heroHome h2 {
+  font-size: var(--h2Size);
+  margin: 0;
+  -webkit-animation: heroTextEnter 4s both alternate 1.5s;
+  animation: heroTextEnter 4s both alternate 1.5s;
+}
+
+.heroHomeHead::before {
+  content: "";
+  background: linear-gradient(45deg, #ffffff, #d3d3d3, #808080, #0000);
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  height: 1px;
+  box-shadow: 2px 2px 5px;
+
+  -webkit-animation: heroBorder 1.5s both alternate 1s;
+
+  animation: heroBorder 1.5s both alternate 1s;
+}
+
+.heroHomeHead::after {
+  content: "";
+  background: linear-gradient(-45deg, #ffffff, #d3d3d3, #808080, #0000);
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 1px;
+  box-shadow: 2px 2px 5px;
+  position: absolute;
+
+  -webkit-animation: heroBorder 1.5s both alternate 2.5s;
+
+  animation: heroBorder 1.5s both alternate 2.5s;
+}
+
+.heroHomeContent {
+  font-size: var(--pSize);
+  width: 90%;
+  position: relative;
+}
+
+.homeFirstSpan {
+  -webkit-animation: navAppear 2.5s ease both 3s;
+  animation: navAppear 2.5s ease both 3s;
+}
+
+.homeSecondSpan {
+  -webkit-animation: navAppear 2.5s ease both 5s;
+  animation: navAppear 2.5s ease both 5s;
+}
+
+.homeThirdSpan {
+  -webkit-animation: navAppear 2.5s ease both 8s;
+  animation: navAppear 2.5s ease both 8s;
+}
+
+.homeFourthSpan {
+  -webkit-animation: navAppear 2.5s ease both 11s;
+  animation: navAppear 2.5s ease both 11s;
+}
+
+.homeFifthSpan {
+  -webkit-animation: navAppear 2.5s ease both 14s;
+  animation: navAppear 2.5s ease both 14s;
+}
+
+.heroHomeContent::before {
+  content: "";
+  top: 0;
+  left: -15px;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    rgba(255, 0, 0, 0.8),
+    rgba(138, 43, 226, 0.8),
+    rgba(0, 0, 255, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  position: absolute;
+  -webkit-animation: contentBorderAppear 4s ease both 12s;
+  animation: contentBorderAppear 4s ease both 12s;
+}
+
+@-webkit-keyframes contentBorderAppear {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes contentBorderAppear {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes heroBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes heroBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes heroTextEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroTextEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menuBtn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuBtn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes navAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* About page Main Section */
+
+.fa-arrow-down {
+  color: grey;
+  margin-top: 120%;
+  margin-left: 10%;
+  float: left;
+  position: fixed;
+  font-size: 5rem;
+  /* opacity: 0.4; */
+}
+
+.aboutMain {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 100px;
+  position: absolute;
+  z-index: -1;
+}
+
+.aboutScroll {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  animation: aboutScrollFlash 4s ease both 5s alternate infinite;
+}
+
+@keyframes aboutScrollFlash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+.aboutText {
+  width: 90%;
+  height: 60dvh;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  z-index: -1;
+}
+
+.aboutPartOne {
+  position: relative;
+  animation: aboutBorderAppear 4s ease both 0.5s;
+}
+
+.aboutPartOne::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+
+.aboutPartTwo {
+  position: relative;
+  animation: aboutAppear linear forwards;
+  opacity: 0;
+  animation-timeline: View();
+  animation-range: entry 15%;
+}
+
+.aboutPartTwo::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+}
+
+.aboutPartThree {
+  position: relative;
+  animation: aboutSlideInFromLeft linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.aboutPartThree::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+}
+
+.aboutPartFour {
+  position: relative;
+  animation: aboutSlideInFromRight linear forwards;
+  animation-timeline: View();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.aboutPartFour::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, black, red, black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.aboutPartFive {
+  position: relative;
+  animation: aboutSlideInFromLeft forwards;
+  animation-timeline: View();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+.aboutPartFive::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(45deg, black, white, black);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+@keyframes changeColor {
+  from {
+    background: var(--aboutSectionAfterOne);
+  }
+  to {
+    background: var(--aboutSectionAfterTwo);
+  }
+}
+
+@keyframes aboutAppear {
+  from {
+    opacity: 0;
+  }
+  from {
+    scale: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes aboutSlideInFromLeft {
+  from {
+    transform: translateX(-100%) scale(0);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes aboutSlideInFromRight {
+  from {
+    transform: translateX(100%) scale(0);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@-webkit-keyframes aboutBorderAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aboutBorderAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.aboutText p {
+  font-size: var(--pSize);
+}
+
+.aboutText h2 {
+  font-size: var(--h2Size);
+}
+
+/* Portfolio Page */
+/* Main */
+
+.portfolioMain {
+  margin-top: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.portfolioHeader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: 100dvh;
+}
+
+.portfolioHead {
+  font-size: var(--h1Size);
+  position: relative;
+  width: 80%;
+  text-align: center;
+  z-index: -1;
+
+  -webkit-animation: portfolioHeadAppear 2s ease 2s both;
+
+  animation: portfolioHeadAppear 2s ease 2s both;
+}
+
+@-webkit-keyframes portfolioHeadAppear {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(1);
+  }
+}
+
+@keyframes portfolioHeadAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolioHead::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(95deg, black, white, black, black, black);
+  position: absolute;
+  -webkit-animation: portfolioHeadBorder 4s ease both 4s;
+  animation: portfolioHeadBorder 4s ease both 4s;
+}
+
+.portfolioHead::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(95deg, black, black, black, white, black);
+  position: absolute;
+  -webkit-animation: portfolioHeadBorder 4s ease both 3s;
+  animation: portfolioHeadBorder 4s ease both 3s;
+}
+
+@-webkit-keyframes portfolioHeadBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes portfolioHeadBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes kitt {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(10%);
+  }
+  20% {
+    transform: translateX(20%);
+  }
+  30% {
+    transform: translateX(30%);
+  }
+  40% {
+    transform: translateX(40%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  60% {
+    transform: translateX(40%);
+  }
+  70% {
+    transform: translateX(30%);
+  }
+  80% {
+    transform: translateX(20%);
+  }
+  90% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes kitt {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(10%);
+  }
+  20% {
+    transform: translateY(20%);
+  }
+  30% {
+    transform: translateY(30%);
+  }
+  40% {
+    transform: translateY(40%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  60% {
+    transform: translateY(40%);
+  }
+  70% {
+    transform: translateY(30%);
+  }
+  80% {
+    transform: translateY(20%);
+  }
+  90% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.portfolioIntro {
+  width: 70%;
+
+  font-size: var(--pSize);
+  margin-left: 5%;
+  text-align: center;
+  z-index: -1;
+  -webkit-animation: portfolioHeadAppear 2s ease 6s both;
+  animation: portfolioHeadAppear 2s ease 6s both;
+}
+
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  text-align: center;
+  font-size: var(--pSize);
+  z-index: -1;
+  -webkit-animation: scrollAppear 4s linear both alternate 8s,
+    scrollRoll 2s ease 5s infinite;
+  animation: scrollAppear 4s linear both alternate 8s,
+    scrollRoll 2s ease 5s infinite;
+}
+
+@-webkit-keyframes scrollAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scrollRoll {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scrollRoll {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.projects {
+  position: absolute;
+  margin-top: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  height: 200dvh;
+  width: 100%;
+  gap: 15%;
+  z-index: -1;
+}
+
+.projectCard {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  border: 1px solid white;
+  text-align: center;
+  -webkit-animation: projectCardAppear;
+  animation: projectCardAppear;
+  animation-timeline: View();
+  animation-range: entry 0%;
+}
+
+@-webkit-keyframes projectCardAppear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes projectCardAppear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.projectCard img {
+  width: 800px;
+}
+
+.projectCard a {
+  text-decoration: none;
+  color: wheat;
+  font-size: var(--pSize);
+  transition: 0.4s;
+}
+
+.projectCard a:hover {
+  color: #ff4500;
+}
+
+/* Contact page */
+
+.contactLinks {
+  margin-top: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+
+  width: 100vw;
+}
+
+.contactLinks a {
+  font-size: var(--h1Size);
+  color: wheat;
+  transition: 0.4s;
+}
+
+.contactLinks a:hover {
+  color: rgb(169, 169, 238);
+}
+
+.contactLinks::before {
+  content: "";
+  background: linear-gradient(45deg, black, white, black);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: -10px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  margin-top: 40%;
+
+  gap: 1.5rem;
+
+  padding: 25px 0;
+  z-index: 0;
+}
+
+.contactLinks::after {
+  content: "";
+  background: linear-gradient(45deg, black, rgb(54, 158, 228), black);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formSection input {
+  margin-bottom: 15px;
+  width: 90vw;
+  font-size: 1rem;
+
+  border-radius: var(--formBorderRadius);
+  text-align: center;
+  padding: 2px 5px;
+}
+
+.contactFormLabel {
+  display: inline-block;
+  width: 150px;
+
+  font-size: var(--pSize);
+}
+
+.formMessage {
+  width: 95vw;
+}
+
+#message {
+  width: 90%;
+  height: 150px;
+
+  border-radius: var(--formBorderRadius);
+  padding: 2px 5px;
+}
+
+.formSubmitBtn {
+  background-color: rgba(0, 0, 0);
+  border: none;
+  border-radius: var(--buttonBorderRadius);
+  width: 10%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+
+  color: wheat;
+  font-size: var(--pSize);
+  transition: 0.75s ease;
+
+  position: relative;
+}
+
+.formSubmitBtn:hover {
+  background-color: rgb(34, 34, 138);
+  cursor: pointer;
+}
+
+.formSubmitBtn::after {
+  content: "";
+  background: linear-gradient(45deg, black, white, black);
+  width: 90vw;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  left: -30vw;
+}
+
+.footerP {
+  font-size: clamp(0.5rem, 1vw, 0.8rem);
+}
+
+/* Breakpoints */
+
+@media (min-width: 985px) {
+  /*Nav bar breakpoints*/
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    margin: 0;
+    margin-top: -30px;
+    flex-direction: row;
+    gap: 10rem;
+    z-index: 1000;
+    -webkit-animation: navAppear 2.5s ease both;
+    animation: navAppear 2.5s ease both;
+  }
+  .links::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(95deg, black, black, red, black, black);
+    position: absolute;
+    -webkit-animation: kitt 5s alternate linear both infinite;
+    animation: kitt 5s alternate linear both infinite;
+  } /*kitt animation is defined in portfolio section*/
+  @-webkit-keyframes kitt {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(10%);
+    }
+    20% {
+      transform: translateX(20%);
+    }
+    30% {
+      transform: translateX(30%);
+    }
+    40% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    60% {
+      transform: translateX(40%);
+    }
+    70% {
+      transform: translateX(30%);
+    }
+    80% {
+      transform: translateX(20%);
+    }
+    90% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes kitt {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(10%);
+    }
+    20% {
+      transform: translateX(20%);
+    }
+    30% {
+      transform: translateX(30%);
+    }
+    40% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    60% {
+      transform: translateX(40%);
+    }
+    70% {
+      transform: translateX(30%);
+    }
+    80% {
+      transform: translateX(20%);
+    }
+    90% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  /*About page breakpoints*/
+  .aboutText {
+    width: 50%;
+  }
+
+  .portfolioIntro {
+    margin: 150px 0 0 25%;
+  }
+
+  .contactForm {
+    margin-top: 10%;
+  }
+
+  .formSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formSection input {
+    width: 90%;
+  }
+  .formMessage {
+    width: 40vw;
+  }
+}
