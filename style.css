@@ -737,6 +737,7 @@ nav {
 
 .formSubmitBtn:hover {
   background-color: rgb(34, 34, 138);
+  cursor: pointer;
 }
 
 .formSubmitBtn::after {
