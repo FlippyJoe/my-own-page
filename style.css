@@ -51,6 +51,7 @@ nav {
   margin-left: 1%;
   font-size: 2rem;
   color: wheat;
+  animation: scrollRoll 2s ease 5s infinite; /*animation is defined in "Portfolio" section*/
 }
 
 #activeBar:checked ~ .openMenu {
@@ -357,15 +358,18 @@ nav {
   width: 100%;
   text-align: center;
   font-size: 5rem;
-  animation: aboutScrollFlash 4s ease both 5s alternate infinite;
+  animation: aboutScrollFlash 6s linear both alternate 10s;
 }
 
 @keyframes aboutScrollFlash {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
     opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -712,8 +716,8 @@ nav {
   margin-left: 5%;
   text-align: center;
   z-index: -1;
-  -webkit-animation: portfolioHeadAppear 2s ease 6s both;
-  animation: portfolioHeadAppear 2s ease 6s both;
+  -webkit-animation: portfolioHeadAppear 2s ease 4s both;
+  animation: portfolioHeadAppear 2s ease 4s both;
 }
 
 .scroll {
@@ -907,6 +911,17 @@ nav {
   border-radius: var(--formBorderRadius);
   text-align: center;
   padding: 2px 5px;
+
+  background-color: rgb(10, 20, 10);
+  color: wheat;
+}
+
+.formSection input:focus {
+  background-color: rgb(10, 20, 10);
+}
+
+.formSection input:valid {
+  background-color: rgb(10, 20, 10);
 }
 
 .contactFormLabel {
@@ -926,6 +941,9 @@ nav {
 
   border-radius: var(--formBorderRadius);
   padding: 2px 5px;
+
+  background-color: rgb(10, 20, 10);
+  color: wheat;
 }
 
 .formSubmitBtn {
@@ -945,7 +963,7 @@ nav {
 }
 
 .formSubmitBtn:hover {
-  background-color: rgb(34, 34, 138);
+  background-color: rgb(25, 50, 25);
   cursor: pointer;
 }
 
@@ -971,6 +989,7 @@ nav {
   .closeMenu {
     display: none;
   }
+
   nav {
     display: flex;
     flex-direction: row;
@@ -1093,5 +1112,131 @@ nav {
   }
   .formMessage {
     width: 40vw;
+  }
+}
+
+/* Deleteeeeeeee */
+
+.thanksBackHome {
+  text-decoration: none;
+  color: wheat;
+  font-size: var(--pSize);
+
+  display: inline-block;
+  position: relative;
+  width: 90vw;
+  height: 50px;
+  text-align: center;
+
+  margin-top: 10%;
+  transition: 0.5s ease;
+  animation: thumbsUpAppear 2s alternate 5s both;
+}
+
+.thanksBackHome::after {
+  content: "";
+  background: linear-gradient(45deg, black, white, black);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+}
+
+.thanksBackHome:hover {
+  color: rgb(185, 145, 72);
+}
+
+.thumbsUp {
+  margin-left: 40%;
+  margin-top: 50px;
+  width: 100px;
+  animation: thumbsUpAppear 2s both alternate 1;
+}
+
+@keyframes thumbsUpAppear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.thanksText {
+  text-align: center;
+  font-size: var(--h1Size);
+  padding: 0 1rem;
+  animation: thumbsUpAppear 2.5s both alternate 1 1s;
+}
+
+.thanksHead {
+  font-size: var(--h1Size);
+  text-align: center;
+}
+
+.thanksOne {
+  animation: thanksMsgAppear 2s linear both 3s;
+}
+
+.thanksTwo {
+  animation: thanksMsgAppear 2s linear both 3.1s;
+}
+
+.thanksThree {
+  animation: thanksMsgAppear 2s linear both alternate 3.2s;
+}
+
+.thanksFour {
+  animation: thanksMsgAppear 2s linear both alternate 3.3s;
+}
+
+.thanksFive {
+  animation: thanksMsgAppear 2s linear both alternate 3.4s;
+  margin-right: 1rem;
+}
+
+.thanksSix {
+  animation: thanksMsgAppear 2s linear both alternate 3.5s;
+}
+
+.thanksSeven {
+  animation: thanksMsgAppear 2s linear both alternate 3.6s;
+}
+
+.thanksEight {
+  animation: thanksMsgAppear 2s linear both alternate 3.7s;
+}
+
+.thanksNine {
+  animation: thanksMsgAppear 2s linear both alternate 3.8s;
+}
+
+.thanksTen {
+  animation: thanksMsgAppear 2s linear both alternate 3.9s;
+}
+
+@keyframes thanksMsgAppear {
+  0% {
+    font-size: 0px;
+    color: blue;
+  }
+  25% {
+    font-size: 0.5rem;
+    color: green;
+  }
+  50% {
+    font-size: 1rem;
+    color: yellow;
+  }
+  75% {
+    font-size: 1.5rem;
+    color: purple;
+  }
+  100% {
+    font-size: 2rem;
+    color: wheat;
   }
 }
