@@ -51,7 +51,19 @@ nav {
   margin-left: 1%;
   font-size: 2rem;
   color: wheat;
-  animation: scrollRoll 2s ease 5s infinite; /*animation is defined in "Portfolio" section*/
+  animation: btnRoll 2s ease infinite;
+}
+
+@keyframes btnRoll {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(8px, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 #activeBar:checked ~ .openMenu {
@@ -201,28 +213,28 @@ nav {
 }
 
 .homeFirstSpan {
-  -webkit-animation: navAppear 2.5s ease both 3s;
-  animation: navAppear 2.5s ease both 3s;
+  -webkit-animation: navAppear 2.5s ease both 2s;
+  animation: navAppear 2.5s ease both 2s;
 }
 
 .homeSecondSpan {
-  -webkit-animation: navAppear 2.5s ease both 5s;
-  animation: navAppear 2.5s ease both 5s;
+  -webkit-animation: navAppear 2.5s ease both 3.5s;
+  animation: navAppear 2.5s ease both 3.5s;
 }
 
 .homeThirdSpan {
-  -webkit-animation: navAppear 2.5s ease both 8s;
-  animation: navAppear 2.5s ease both 8s;
+  -webkit-animation: navAppear 2.5s ease both 6s;
+  animation: navAppear 2.5s ease both 6s;
 }
 
 .homeFourthSpan {
-  -webkit-animation: navAppear 2.5s ease both 11s;
-  animation: navAppear 2.5s ease both 11s;
+  -webkit-animation: navAppear 2.5s ease both 8.5s;
+  animation: navAppear 2.5s ease both 8.5s;
 }
 
 .homeFifthSpan {
-  -webkit-animation: navAppear 2.5s ease both 14s;
-  animation: navAppear 2.5s ease both 14s;
+  -webkit-animation: navAppear 2.5s ease both 11s;
+  animation: navAppear 2.5s ease both 11s;
 }
 
 .heroHomeContent::before {
@@ -238,8 +250,8 @@ nav {
     rgba(0, 0, 0, 0.8)
   );
   position: absolute;
-  -webkit-animation: contentBorderAppear 4s ease both 12s;
-  animation: contentBorderAppear 4s ease both 12s;
+  -webkit-animation: contentBorderAppear 4s ease both 10s;
+  animation: contentBorderAppear 4s ease both 10s;
 }
 
 @-webkit-keyframes contentBorderAppear {
@@ -414,7 +426,7 @@ nav {
   height: 1px;
   background: linear-gradient(45deg, black, red, black);
   position: absolute;
-  bottom: -20%;
+  bottom: -10%;
   left: 0;
 }
 
