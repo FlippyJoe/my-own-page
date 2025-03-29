@@ -677,10 +677,12 @@ nav {
 /* Main */
 
 .portfolioHeader {
-  margin-top: 100px;
+  margin-top: 50px;
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: inherit;
   height: 100dvh;
 }
@@ -688,7 +690,7 @@ nav {
 .portfolioHead {
   font-size: var(--h1Size);
   position: relative;
-  width: 80%;
+  width: 60%;
   text-align: center;
   z-index: -1;
 
@@ -720,14 +722,12 @@ nav {
 .portfolioHead::before {
   content: "";
   top: 0;
-  left: 0;
-  width: 80%;
+  right: 0;
+  width: 10%;
   height: 2px;
   background: linear-gradient(
     95deg,
-    rgb(0, 0, 0),
     rgb(255, 255, 255),
-    rgb(0, 0, 0),
     rgb(0, 0, 0),
     rgb(0, 0, 0)
   );
@@ -740,15 +740,13 @@ nav {
   content: "";
   bottom: 0;
   left: 0;
-  width: 80%;
+  width: 10%;
   height: 2px;
   background: linear-gradient(
     95deg,
     rgb(0, 0, 0),
     rgb(0, 0, 0),
-    rgb(0, 0, 0),
-    rgb(255, 255, 255),
-    rgb(0, 0, 0)
+    rgb(255, 255, 255)
   );
   position: absolute;
   -webkit-animation: portfolioHeadBorder 4s ease both 3s;
@@ -846,21 +844,17 @@ nav {
 }
 
 .portfolioIntro {
-  width: 70%;
-
+  width: 50%;
   font-size: var(--pSize);
-  margin-left: 5%;
-  text-align: center;
+  align-self: center;
+  text-align: left;
   z-index: -1;
   -webkit-animation: portfolioHeadAppear 2s ease 4s both;
   animation: portfolioHeadAppear 2s ease 4s both;
 }
 
 .scroll {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+  width: fit-content;
   text-align: center;
   font-size: var(--pSize);
   z-index: -1;
@@ -919,7 +913,7 @@ nav {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  height: 200dvh;
+  height: 150dvh;
   width: 100%;
   gap: 15%;
   z-index: -1;
@@ -930,6 +924,7 @@ nav {
   height: -moz-fit-content;
   height: fit-content;
   width: 90%;
+
   border: 1px solid rgb(114, 110, 110);
   border-radius: 8px;
   text-align: center;
@@ -1430,8 +1425,31 @@ nav {
     width: 50%;
   }
 
+  /* Portfolio page breakpoints */
+
+  .portfolioHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 10rem;
+  }
+
   .portfolioIntro {
-    margin: 150px 0 0 25%;
+    margin-top: 10rem;
+    position: relative;
+    width: 50%;
+    text-align: left;
+    z-index: -1;
+  }
+
+  .scroll {
+    width: fit-content;
+  }
+
+  .projects {
+    height: 180dvh;
   }
 
   .contactForm {
