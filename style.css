@@ -195,7 +195,7 @@ nav {
   justify-content: center;
   align-items: flex-start;
   width: fit-content;
-
+  margin-top: 5rem;
   position: relative;
 }
 
@@ -215,7 +215,7 @@ nav {
 
 .heroHomeHead::before {
   content: "";
-  background: linear-gradient(45deg, #0000, grey, darkgrey, #ffffff);
+  background: linear-gradient(45deg, #0000, #808080, #a9a9a9, #ffffff);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -228,7 +228,7 @@ nav {
 
 .heroHomeHead::after {
   content: "";
-  background: linear-gradient(45deg, #ffffff, grey, darkgrey, #0000);
+  background: linear-gradient(45deg, #ffffff, #808080, #a9a9a9, #0000);
   right: 30px;
   bottom: 0;
   width: 100%;
@@ -967,9 +967,13 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 2%;
 
   width: 100vw;
+}
+
+.contactMe {
+  font-size: 1rem;
 }
 
 .contactLinks a {
@@ -1092,23 +1096,44 @@ nav {
 }
 
 .formSubmitBtn:hover {
-  background-color: rgb(74, 76, 74);
+  background-color: rgb(50, 49, 49);
   cursor: pointer;
+}
+
+.formSubmitBtn::before {
+  content: "";
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  top: -1px;
+  right: 1px;
+  bottom: 1px;
+  left: -1px;
+
+  background: linear-gradient(45deg, #0000, #ffff);
+  border-radius: var(--buttonBorderRadius);
+
+  z-index: -1;
 }
 
 .formSubmitBtn::after {
   content: "";
-  background: linear-gradient(
-    45deg,
-    rgb(0, 0, 0),
-    rgb(255, 255, 255),
-    rgb(0, 0, 0)
-  );
-  width: 90vw;
-  height: 1px;
   position: absolute;
-  bottom: -10px;
-  left: -30vw;
+
+  height: 100%;
+  width: 100%;
+
+  top: 1px;
+  right: -1px;
+  bottom: -1px;
+  left: 1px;
+
+  background: linear-gradient(45deg, #ffffff, #000000);
+  border-radius: var(--buttonBorderRadius);
+
+  z-index: -1;
 }
 
 .footerP {
@@ -1450,6 +1475,12 @@ nav {
     align-items: center;
   }
 
+  /* Contact form */
+
+  .contactMe {
+    font-size: 1.2rem;
+  }
+
   .formSection input {
     width: 90%;
   }
@@ -1459,6 +1490,7 @@ nav {
 }
 
 @media (orientation: landscape) and (max-width: 985px) {
+  /* About page */
   .aboutText {
     height: 90dvh;
     margin-left: 50px;
@@ -1467,6 +1499,8 @@ nav {
     margin: 0;
     padding: 0;
   }
+
+  /* Portfolio page */
 
   .scroll {
     display: none;
