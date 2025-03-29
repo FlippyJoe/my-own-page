@@ -957,6 +957,11 @@ nav {
   color: rgb(255, 69, 0);
 }
 
+.projectCard img {
+  border-radius: inherit;
+  border: inherit;
+}
+
 /* Contact page */
 
 .contactLinks {
