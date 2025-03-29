@@ -844,8 +844,7 @@ nav {
 .portfolioIntro {
   width: 50%;
   font-size: var(--pSize);
-  align-self: center;
-  text-align: left;
+  text-align: center;
   z-index: -1;
   -webkit-animation: portfolioHeadAppear 2s ease 4s both;
   animation: portfolioHeadAppear 2s ease 4s both;
