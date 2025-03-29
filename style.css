@@ -1480,4 +1480,12 @@ nav {
     margin: 0;
     padding: 0;
   }
+
+  .scroll {
+    display: none;
+  }
+
+  .portfolioIntro {
+    margin-bottom: 5rem;
+  }
 }
