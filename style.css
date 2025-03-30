@@ -389,20 +389,48 @@ nav {
   z-index: -1;
 }
 
+.aboutText p {
+  font-size: var(--pSize);
+  margin: 0;
+}
+
+.aboutText h2 {
+  font-size: var(--h2Size);
+  margin-bottom: 10px;
+}
+
 .aboutScroll {
   display: inline-block;
   width: 100%;
   text-align: center;
   font-size: 5rem;
-  -webkit-animation: aboutScrollFlash 6s linear both alternate 10s;
-  animation: aboutScrollFlash 6s linear both alternate 10s;
+  -webkit-animation: aboutScrollFlash 10s linear both alternate 5s;
+  animation: aboutScrollFlash 10s linear both alternate 5s;
 }
 
 @-webkit-keyframes aboutScrollFlash {
   0% {
     opacity: 0;
   }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.2;
+  }
   50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  85% {
+    opacity: 0.2;
+  }
+  95% {
     opacity: 0.2;
   }
   100% {
@@ -437,8 +465,8 @@ nav {
 
 .aboutPartOne {
   position: relative;
-  -webkit-animation: aboutBorderAppear 4s ease both 0.5s;
-  animation: aboutBorderAppear 4s ease both 0.5s;
+  -webkit-animation: aboutBorderAppear 2s both 0.5s;
+  animation: aboutBorderAppear 2s both 0.5s;
 }
 
 .partOneText::after {
@@ -663,16 +691,6 @@ nav {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-.aboutText p {
-  font-size: var(--pSize);
-  margin: 0;
-}
-
-.aboutText h2 {
-  font-size: var(--h2Size);
-  margin-bottom: 10px;
 }
 
 /* Portfolio Page */
