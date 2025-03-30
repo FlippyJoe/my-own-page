@@ -1139,7 +1139,7 @@ nav {
   bottom: -1px;
   left: 1px;
 
-  background: linear-gradient(45deg, #ffffff, #000000);
+  background: linear-gradient(45deg, #ffffff, rgb(255, 0, 0));
   border-radius: var(--buttonBorderRadius);
 
   z-index: -1;
