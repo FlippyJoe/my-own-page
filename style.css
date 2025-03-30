@@ -179,6 +179,8 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin-top: 5rem;
   position: relative;
@@ -858,6 +860,8 @@ nav {
 }
 
 .scroll {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   font-size: var(--pSize);
@@ -935,7 +939,19 @@ nav {
   animation: projectCardAppear;
   animation-timeline: View();
   animation-range: entry 0%;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes projectCardAppear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 @keyframes projectCardAppear {
@@ -1469,6 +1485,8 @@ nav {
   }
 
   .scroll {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 
