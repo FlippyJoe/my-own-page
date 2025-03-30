@@ -1108,7 +1108,7 @@ nav {
 }
 
 .formSubmitBtn:hover {
-  background-color: rgb(50, 49, 49);
+  background: linear-gradient(to right, rgb(1, 1, 147), rgb(61, 128, 151));
   cursor: pointer;
 }
 
@@ -1142,7 +1142,7 @@ nav {
   bottom: -1px;
   left: 1px;
 
-  background: linear-gradient(45deg, #ffffff, rgb(0, 0, 255));
+  background: linear-gradient(to right, #ffffff, rgb(0, 0, 255));
   border-radius: var(--buttonBorderRadius);
 
   z-index: -1;
