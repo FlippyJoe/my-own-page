@@ -982,6 +982,7 @@ nav {
 
 .contactMe {
   font-size: 1rem;
+  text-align: center;
 }
 
 .contactLinks a {
@@ -1120,7 +1121,7 @@ nav {
   bottom: 1px;
   left: -1px;
 
-  background: linear-gradient(45deg, #0000, #ffff);
+  background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
   border-radius: var(--buttonBorderRadius);
 
   z-index: -1;
