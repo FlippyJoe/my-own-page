@@ -1121,7 +1121,7 @@ nav {
   bottom: 1px;
   left: -1px;
 
-  background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
+  background: linear-gradient(to right, rgb(0, 0, 255), rgb(255, 255, 255));
   border-radius: var(--buttonBorderRadius);
 
   z-index: -1;
@@ -1139,7 +1139,7 @@ nav {
   bottom: -1px;
   left: 1px;
 
-  background: linear-gradient(45deg, #ffffff, rgb(255, 0, 0));
+  background: linear-gradient(45deg, #ffffff, rgb(0, 0, 255));
   border-radius: var(--buttonBorderRadius);
 
   z-index: -1;
