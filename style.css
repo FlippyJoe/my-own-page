@@ -1167,8 +1167,8 @@ nav {
 
   margin-top: 10%;
   transition: 0.5s ease;
-  -webkit-animation: thumbsUpAppear 2s alternate 5s both;
-  animation: thumbsUpAppear 2s alternate 5s both;
+  -webkit-animation: thumbsUpAppear 2s alternate 7s both;
+  animation: thumbsUpAppear 2s alternate 7s both;
 }
 
 .thanksBackHome::after {
@@ -1234,54 +1234,54 @@ nav {
 }
 
 .thanksOne {
-  -webkit-animation: thanksMsgAppear 2s linear both 3s;
-  animation: thanksMsgAppear 2s linear both 3s;
+  -webkit-animation: thanksMsgAppear 3s linear both 4s;
+  animation: thanksMsgAppear 3s linear both 4s;
 }
 
 .thanksTwo {
-  -webkit-animation: thanksMsgAppear 2s linear both 3.1s;
-  animation: thanksMsgAppear 2s linear both 3.1s;
+  -webkit-animation: thanksMsgAppear 3s linear both 4.1s;
+  animation: thanksMsgAppear 3s linear both 4.1s;
 }
 
 .thanksThree {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.2s;
-  animation: thanksMsgAppear 2s linear both alternate 3.2s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.2s;
+  animation: thanksMsgAppear 3s linear both alternate 4.2s;
 }
 
 .thanksFour {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.3s;
-  animation: thanksMsgAppear 2s linear both alternate 3.3s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.3s;
+  animation: thanksMsgAppear 3s linear both alternate 4.3s;
 }
 
 .thanksFive {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.4s;
-  animation: thanksMsgAppear 2s linear both alternate 3.4s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.4s;
+  animation: thanksMsgAppear 3s linear both alternate 4.4s;
   margin-right: 1rem;
 }
 
 .thanksSix {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.5s;
-  animation: thanksMsgAppear 2s linear both alternate 3.5s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.5s;
+  animation: thanksMsgAppear 3s linear both alternate 4.5s;
 }
 
 .thanksSeven {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.6s;
-  animation: thanksMsgAppear 2s linear both alternate 3.6s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.6s;
+  animation: thanksMsgAppear 3s linear both alternate 4.6s;
 }
 
 .thanksEight {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.7s;
-  animation: thanksMsgAppear 2s linear both alternate 3.7s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.7s;
+  animation: thanksMsgAppear 3s linear both alternate 4.7s;
 }
 
 .thanksNine {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.8s;
-  animation: thanksMsgAppear 2s linear both alternate 3.8s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.8s;
+  animation: thanksMsgAppear 3s linear both alternate 4.8s;
 }
 
 .thanksTen {
-  -webkit-animation: thanksMsgAppear 2s linear both alternate 3.9s;
-  animation: thanksMsgAppear 2s linear both alternate 3.9s;
+  -webkit-animation: thanksMsgAppear 3s linear both alternate 4.9s;
+  animation: thanksMsgAppear 3s linear both alternate 4.9s;
 }
 
 @-webkit-keyframes thanksMsgAppear {
