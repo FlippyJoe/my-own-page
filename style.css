@@ -378,10 +378,6 @@ nav {
   color: rgb(245, 222, 179);
 }
 
-.y1 {
-  padding-right: 1rem;
-}
-
 .w {
   -webkit-animation: whyAppear 3s linear both 4s;
   animation: whyAppear 3s linear both 4s;
@@ -393,6 +389,7 @@ nav {
 }
 
 .y1 {
+  padding-right: 1rem;
   -webkit-animation: whyAppear 3s linear both 4.2s;
   animation: whyAppear 3s linear both 4.2s;
 }
