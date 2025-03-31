@@ -383,43 +383,77 @@ nav {
 }
 
 .w {
+  -webkit-animation: whyAppear 3s linear both 4s;
   animation: whyAppear 3s linear both 4s;
 }
 
 .h {
+  -webkit-animation: whyAppear 3s linear both 4.1s;
   animation: whyAppear 3s linear both 4.1s;
 }
 
 .y1 {
+  -webkit-animation: whyAppear 3s linear both 4.2s;
   animation: whyAppear 3s linear both 4.2s;
 }
 
 .f {
+  -webkit-animation: whyAppear 3s linear both 4.3s;
   animation: whyAppear 3s linear both 4.3s;
 }
 
 .l {
+  -webkit-animation: whyAppear 3s linear both 4.4s;
   animation: whyAppear 3s linear both 4.4s;
 }
 
 .i {
+  -webkit-animation: whyAppear 3s linear both 4.5s;
   animation: whyAppear 3s linear both 4.5s;
 }
 
 .p1 {
+  -webkit-animation: whyAppear 3s linear both 4.6s;
   animation: whyAppear 3s linear both 4.6s;
 }
 
 .p2 {
+  -webkit-animation: whyAppear 3s linear both 4.7s;
   animation: whyAppear 3s linear both 4.7s;
 }
 
 .y2 {
+  -webkit-animation: whyAppear 3s linear both 4.8s;
   animation: whyAppear 3s linear both 4.8s;
 }
 
 .qMark {
+  -webkit-animation: whyAppear 3s linear both 4.9s;
   animation: whyAppear 3s linear both 4.9s;
+}
+
+@-webkit-keyframes whyAppear {
+  0% {
+    font-size: 0px;
+    color: rgb(0, 0, 255);
+  }
+  25% {
+    font-size: 1.5rem;
+    color: rgb(0, 128, 0);
+  }
+  50% {
+    font-size: 2.8rem;
+    color: rgb(255, 255, 0);
+  }
+  75% {
+    font-size: 1.8rem;
+    color: rgb(128, 0, 128);
+  }
+  100% {
+    font-size: 1.5rem;
+    color: rgb(245, 222, 179);
+    opacity: 0.1;
+  }
 }
 
 @keyframes whyAppear {
@@ -1561,6 +1595,30 @@ nav {
 
   .aboutText {
     width: 50%;
+  }
+
+  @-webkit-keyframes whyAppear {
+    0% {
+      font-size: 0px;
+      color: rgb(0, 0, 255);
+    }
+    25% {
+      font-size: 1.5rem;
+      color: rgb(0, 128, 0);
+    }
+    50% {
+      font-size: 2.8rem;
+      color: rgb(255, 255, 0);
+    }
+    75% {
+      font-size: 1.8rem;
+      color: rgb(128, 0, 128);
+    }
+    100% {
+      font-size: 1.5rem;
+      color: rgb(245, 222, 179);
+      opacity: 0.1;
+    }
   }
 
   @keyframes whyAppear {
