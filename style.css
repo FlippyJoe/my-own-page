@@ -1594,6 +1594,7 @@ nav {
 
   .aboutText {
     width: 50%;
+    margin-bottom: 10%;
   }
 
   @-webkit-keyframes whyAppear {
