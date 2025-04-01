@@ -23,11 +23,11 @@
   <body>
     <header>
       <nav>
-        <input type="checkbox" id="activeBar" />
-        <label for="activeBar" class="openMenu"
+        <input type="checkbox" id="activeBar" title="checkbox"/>
+        <label for="activeBar" class="openMenu" title="open menu button"
           ><i class="fa fa-bars"></i
         ></label>
-        <label for="activeBar" class="closeMenu"><i class="fa fa-x"></i></label>
+        <label for="activeBar" class="closeMenu" title="close menu button"><i class="fa fa-x"></i></label>
         <section class="links">
           <a href="index.html" >Home</a>
           <a href="about.html" >About</a>
@@ -48,20 +48,20 @@
       <input type="hidden" name="redirect" value="https://flippyjoe.github.io/my-own-page/thanks.html">
       
       <!--The form-->
-      <section class="formSection formName"><label for="name"   class="contactFormLabel nameLabel">*Your name: </label>
+      <section class="formSection formName"><label for="name"   class="contactFormLabel nameLabel" title="ENter name">*Your name: </label>
           <input type="text" name="name" id="nameForm" placeholder="Your name" required class="contactFormInput"></section>
-      <section class="formSection formEmail"><label for="email" class="contactFormLabel emailLabel">*Your email: </label>
+      <section class="formSection formEmail"><label for="email" class="contactFormLabel emailLabel" title="Enter email">*Your email: </label>
           <input type="email" name="email" id="emailForm" placeholder="Your email" required class="contactFormInput"></section>
-      <section class="formSection formPhone"><label for="phone" class="contactFormLabel phoneLabel">Your phone: </label>
+      <section class="formSection formPhone"><label for="phone" class="contactFormLabel phoneLabel" title="Enter phone number">Your phone: </label>
           <input type="tel" name="phone" id="phoneForm" placeholder="12345678" class="contactFormInput"></section>
-      <section class="formSection formSubject"><label for="subject" class="contactFormLabel subjectLabel">*Subject: </label>
+      <section class="formSection formSubject"><label for="subject" class="contactFormLabel subjectLabel" title="subject">*Subject: </label>
           <input type="text" name="subject" id="subject" required placeholder="Subject" class="contactFormInput"></section>
       <section class="formSection formMessage">
-        <label for="message" class="contactFormLabel messageLabel">*Your message: </label>
+        <label for="message" class="contactFormLabel messageLabel" title="your message">*Your message: </label>
         <textarea name="
         message" id="message" required minlength="10" maxlength="150" placeholder="Your minimum 10, maximum 150 character long message" class="contactFormInput"></textarea>
       </section>
-        <button type="submit" class="formSubmitBtn">Send message</button>
+        <button type="submit" class="formSubmitBtn" title="submit form button">Send message</button>
      </form>
      <footer><p class="footerP">* Required field</p></footer>
       
