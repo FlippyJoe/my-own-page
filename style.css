@@ -549,7 +549,7 @@ nav {
 
 .aboutText {
   width: 80%;
-  height: 100dvh;
+  height: 70vh;
   align-self: center;
   justify-content: center;
   align-items: center;
@@ -598,6 +598,7 @@ nav {
 .aboutPartTwo {
   position: relative;
   opacity: 0;
+  margin-bottom: 40%;
   -webkit-animation: aboutSlideInFromLeft linear forwards;
   animation: aboutSlideInFromLeft linear forwards;
   animation-timeline: view();
@@ -670,6 +671,7 @@ nav {
 .aboutPartFive {
   position: relative;
   opacity: 0;
+  margin-bottom: 50%;
   -webkit-animation: aboutSlideInFromRight forwards;
   animation: aboutSlideInFromRight forwards;
   animation-timeline: View();
